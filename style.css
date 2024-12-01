@@ -1,4 +1,78 @@
-div {
-    margin-bottom: 10px;
-    padding: 6px;
+:root {
+    --main-font: "Alice", serif;
+    --text-color-primay: #291B1A;
+    --text-color-secondary: #573A37;
+    --text-color-on-bg: #F0E8C2;
+}
+
+/* (Define um valor fix)px (Tamanho relativo ao elemento PAI)em (1rem -> 16px)rem % */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    color: var(--text-color-primay);
+    font-family: var(--main-font);
+    background-image: url(assets/bg-image.jpg);
+    background-size: cover;
+}
+
+#page {
+    box-sizing: border-box;
+    width: 800px;
+    /* Short hand Top right bottom left */
+    margin: 3rem auto 1.75rem; /* 48px auto 100px */
+    background-color: var(--text-color-on-bg);
+    border-radius: 1.5rem;
+    padding: 1.5rem;
+}
+
+img {
+    border-radius: 1rem;
+}
+
+main {
+    padding: 1.5rem;
+}
+
+p {
+    color: var(--text-color-secondary);
+}
+
+/* Um elemento que possui o mesmo elemento anterior a ele. */
+section + section {
+    margin-top: 1.5rem;
+}
+
+#about p + p {
+    margin-top: 0.75rem;
+}
+
+h1 {
+    line-height: 140%;
+    font-size: 2.5rem;
+    margin-bottom: 0.25rem;
+}
+
+h2 {
+    line-height: 150%;
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-bottom: 0.25rem;
+}
+
+ul {
+    padding-left: 1.5rem;
+}
+
+footer {
+    color: var(--text-color-on-bg);
+    text-align: center;
+    padding-bottom: 3rem;
+}
+
+footer img {
+    vertical-align: middle;
 }
